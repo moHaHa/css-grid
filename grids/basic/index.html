@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic concepts of grid layout</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Open+Sans&display=swap');
+      .kalam {
+        font-family: 'Kalam', cursive;
+      }
+      .open-sans {
+        font-family: 'Open Sans', sans-serif;
+      }
+      .dark {
+        background-color: rgb(46, 51, 51);
+        color: white;
+    }
+    </style>
+  </head>
+  <body class="dark open-sans">
+    <h2>make responsive cards design</h2>
+    <p>but this time not using bootstrap or columns and rows</p>
+    <p>but using <mark>grid</mark> </p>
+    <p>ok here what we whant for 
+        <ul>
+            <li>  xl : 4 items </li>
+            <li>   lg : 3 items </li>
+            <li>   md : 2 itmes </li>
+            <li>   sm and less 1 item</li>
+        </ul> 
+      
+      
+      
+       </p>
+    <div class=" container-style container">
+        <div class="grid-item-style grid-item">
+            <div class="card-style card"></div>
+        </div>
+        <div class="grid-item-style grid-item">
+            <div class="card-style card"></div>
+        </div>
+        <div class="grid-item-style grid-item">
+            <div class="card-style card"></div>
+        </div>
+        <div class="grid-item-style grid-item">
+            <div class="card-style card"></div>
+        </div>
+    </div>
+    <style>
+        .container-style {
+            background-color: #383e3e;
+          
+            padding: 10px;
+            
+        }
+        .grid-item-style {
+            background-color: #515858;
+            padding: 10px;
+        }
+        .card-style {
+            padding: 10px;
+            border-radius: 10px;
+            background-color: white;
+        }
+        
+    </style>
+    <style>
+        .container {
+            display: grid;
+        }
+        .grid-item {
+
+        }
+        @media (min-width:600px) {
+            .container {
+                grid-template-columns: 1fr; 
+            }   
+        }
+        @media (min-width:900px) {
+            .container {
+                grid-template-columns: 1fr 1fr ; 
+            }   
+            
+        }
+        @media (min-width:1200px) {
+            .container {
+                grid-template-columns:  1fr 1fr 1fr; 
+            }   
+            
+        }
+        @media (min-width:1910px) {
+            .container {
+                grid-template-columns: 1fr 1fr 1fr 1fr; 
+            }   
+            
+        }
+    </style>
+</body>
+</html>
